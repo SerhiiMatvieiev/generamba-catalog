@@ -1,5 +1,5 @@
 //
-//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ prefix }}{{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import {{ module_info.project_name }}
 
 class {{ module_info.name }}ModuleAssemblerTests: XCTestCase {
 
@@ -23,7 +24,7 @@ class {{ module_info.name }}ModuleAssemblerTests: XCTestCase {
     func testModuleAssemblerForViewController() {
 
         //given
-        let view = {{ module_info.name }}ViewController()
+        let view = {{ module_info.name }}ModuleAssembler.makeModule() as! {{ module_info.name }}ViewController
 
         //then
         XCTAssertNotNil(view.output, "{{ module_info.name }}ViewController is nil after configuration")
