@@ -8,7 +8,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: UIViewController {
+final class {{ module_info.name }}ViewController: UIViewController {
 
     // MARK: Dependencies
     var output: {{ module_info.name }}ViewOutput!
@@ -23,6 +23,6 @@ class {{ module_info.name }}ViewController: UIViewController {
 // MARK: - {{module_info.name}}ViewInput
 extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
     func setupInitialState() {
-        
+
     }
 }
