@@ -9,17 +9,20 @@
 final class {{ module_info.name }}Presenter {
 
     // MARK: Dependencies
+
     weak var view: {{ module_info.name }}ViewInput?
     var interactor: {{ module_info.name }}InteractorInput!
     var router: {{ module_info.name }}RouterInput!
 }
 
 // MARK: - {{ module_info.name }}ModuleInput
-extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
 
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+    
 }
 
 // MARK: - {{ module_info.name }}ViewOutput
+
 extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
     func viewIsReady() {
         view?.setupInitialState()
@@ -27,6 +30,7 @@ extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
 }
 
 // MARK: - {{ module_info.name }}InteractorOutput
+
 extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
 
 }
