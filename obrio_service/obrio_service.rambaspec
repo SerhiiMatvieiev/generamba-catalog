@@ -1,0 +1,17 @@
+# Template information section
+name: "obrio_service"
+summary: "Swift Service module template"
+author: "Serhii Matvieiev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+- {name: Service.swift, path: Code/service_input.swift.liquid}
+- {name: ServiceImpl.swift, path: Code/service.swift.liquid}
+
+
+# The declarations for test files
+test_files:
+- {name: ServiceTests.swift, path: Tests/router_tests.swift.liquid}
