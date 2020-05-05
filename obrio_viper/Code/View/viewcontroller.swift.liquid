@@ -20,6 +20,11 @@ final class {{ module_info.name }}ViewController: UIViewController {
         super.viewDidLoad()
         output.viewIsReady()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        output.viewDidAppear()
+    }
 }
 
 // MARK: - {{module_info.name}}ViewInput
