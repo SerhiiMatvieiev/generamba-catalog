@@ -9,9 +9,7 @@
 import UIKit
 
 enum {{ module_info.name }}ModuleAssembler {
-
     typealias ModuleInputConfigurator = ({{ module_info.name }}ModuleInput) -> Void
-    
     static func makeModule(_ configurator: ModuleInputConfigurator? = nil) -> UIViewController {
 
         let view = {{ module_info.name }}ViewController()
