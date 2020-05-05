@@ -14,4 +14,4 @@ code_files:
 
 # The declarations for test files
 test_files:
-- {name: ServiceTests.swift, path: Tests/router_tests.swift.liquid}
+- {name: ServiceTests.swift, path: Tests/service_tests.swift.liquid}
