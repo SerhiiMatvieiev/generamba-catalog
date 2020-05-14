@@ -11,7 +11,7 @@ import UIKit
 enum {{ module_info.name }}ModuleAssembler {
 
     typealias ModuleInputConfigurator = ({{ module_info.name }}ModuleInput) -> Void
-    
+
     static func makeModule(_ configurator: ModuleInputConfigurator? = nil) -> UIViewController {
 
         let view = {{ module_info.name }}ViewController()
@@ -19,11 +19,11 @@ enum {{ module_info.name }}ModuleAssembler {
         let router = {{ module_info.name }}Router()
         router.view = view
 
-        let presenter = {{ module_info.name }}Presenter()
+        let presenter = {{ module_info.name }}Presenter(dependencies: .init())
         presenter.view = view
         presenter.router = router
 
-        let interactor = {{ module_info.name }}Interactor()
+        let interactor = {{ module_info.name }}Interactor(dependencies: .init())
         interactor.output = presenter
 
         presenter.interactor = interactor

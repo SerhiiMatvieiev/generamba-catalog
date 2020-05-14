@@ -8,9 +8,7 @@
 
 import UI
 
-final class {{ module_info.name }}ViewController: UIViewController {
-
-    // MARK: - Dependencies
+final class {{ module_info.name }}ViewController: ViewController<{{module_info.name}}View> {
 
     var output: {{ module_info.name }}ViewOutput!
 
@@ -18,12 +16,20 @@ final class {{ module_info.name }}ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         output.viewIsReady()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         output.viewDidAppear()
+    }
+
+    // MARK: - Private
+
+    private func observeEvents() {
+
     }
 }
 
@@ -32,6 +38,6 @@ final class {{ module_info.name }}ViewController: UIViewController {
 extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
 
     func setupInitialState() {
-
+        observeEvents()
     }
 }
