@@ -8,20 +8,20 @@
 
 final class {{ module_info.name }}Presenter {
 
-    weak var view: {{ module_info.name }}ViewInput?
-    var interactor: {{ module_info.name }}InteractorInput!
-    var router: {{ module_info.name }}RouterInput!
-
     struct Dependencies {
 
     }
+
+    weak var view: {{ module_info.name }}ViewInput?
+    var interactor: {{ module_info.name }}InteractorInput!
+    var router: {{ module_info.name }}RouterInput!
 
     private let dependencies: Dependencies
 
     // MARK: - Init
 
     init(dependencies: Dependencies) {
-      self.dependencies = dependencies
+        self.dependencies = dependencies
     }
 }
 
